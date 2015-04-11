@@ -4,13 +4,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>FullCalendar Experiment</title>
     <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
-  </head>
-  <body>
-    <div id="calendar"></div>
-    <button onclick="$('#calendar').fullCalendar('prev');">prev</button>
-    <button onclick="$('#calendar').fullCalendar('next');">next</button>
-    <button onclick="addSchedule();">add schedule</button>
-
     <script src='lib/jquery.min.js'></script>
     <script src='lib/moment.min.js'></script>
     <script src='fullcalendar/fullcalendar.js'></script>
@@ -20,29 +13,29 @@
         $('#calendar').fullCalendar({
           // put your options and callbacks here
           //weekends: false
-
           defaultView: 'basicWeek',
-
           height: 200,
-
           header: {
             center: 'month,basicWeek,agendaWeek,agendaFourDays,agendaFiveDays'
             //center: 'basicWeek'
           },
-
           views: {
             month: {titleFormat: 'YYYY, MM, DD'},
             agendaFourDays: {type: 'agenda', duration: {days: 4}, buttonText: '4 day'},
             agendaFiveDays: {type: 'basic', duration: {days: 5}, buttonText: 'five days'}
           },
-
           eventSources: [{events: [{title: 'title', start: '2015-04-17'}]}],
         });
       });
-
       function addSchedule() {
         $('#calendar').fullCalendar('addEventSource', {events: [{title: 'title2', start: '2015-04-18'}]});
       }
     </script>
+  </head>
+  <body>
+    <div id="calendar"></div>
+    <button onclick="$('#calendar').fullCalendar('prev');">prev</button>
+    <button onclick="$('#calendar').fullCalendar('next');">next</button>
+    <button onclick="addSchedule();">add schedule</button>
   </body>
 </html>
