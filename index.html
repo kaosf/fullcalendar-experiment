@@ -19,7 +19,10 @@
         // page is now ready, initialize the calendar...
         $('#calendar').fullCalendar({
           // put your options and callbacks here
-          //weekends: false
+          //weekends: false,
+          editable: true,
+          //eventStartEditable: true,
+          //eventDurationEditable: true,
 
           defaultView: 'basicWeek',
 
@@ -36,7 +39,7 @@
             agendaFiveDays: {type: 'basic', duration: {days: 5}, buttonText: 'five days'}
           },
 
-          eventSources: [{events: [{title: 'title', start: '2015-04-17'}]}],
+          eventSources: [{events: [{title: 'title', start: '2015-04-22'}]}],
         });
       });
 
