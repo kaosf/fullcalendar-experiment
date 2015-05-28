@@ -24,9 +24,9 @@
           //eventStartEditable: true,
           //eventDurationEditable: true,
 
-          defaultView: 'basicWeek',
+          defaultView: 'month',
 
-          height: 200,
+          height: 600,
 
           header: {
             center: 'month,basicWeek,agendaWeek,agendaFourDays,agendaFiveDays'
@@ -39,7 +39,21 @@
             agendaFiveDays: {type: 'basic', duration: {days: 5}, buttonText: 'five days'}
           },
 
-          eventSources: [{events: [{title: 'title', start: '2015-04-22'}]}],
+
+          eventDragStop: function( event, jsEvent, ui, view ) {
+            alert('DragStop');
+          },
+          eventDrop: function(event, delta, revertFunc) {
+            alert('Drop');
+          },
+          eventResizeStop: function(event, delta, revertFunc) {
+            alert('ResizeStop');
+          },
+          eventResize: function(event, delta, revertFunc) {
+            alert('Resize');
+          },
+
+          eventSources: [{events: [{title: 'title', start: '2015-05-28', end: '2015-05-28'}]}],
         });
       });
 
