@@ -43,4 +43,5 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'momentjs-rails', '2.10.2'
 gem 'fullcalendar-rails', '2.3.1.0'
