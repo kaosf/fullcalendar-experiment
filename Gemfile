@@ -43,3 +43,4 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'fullcalendar-rails', '2.3.1.0'
